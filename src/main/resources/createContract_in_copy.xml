@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order>
+    <account>
+        <billingAddress>
+            <address>
+                <street>Puławska</street>
+                <postalCode>00-222</postalCode>
+                <city>Warszawa</city>
+            </address>
+        </billingAddress>
+    </account>
+
+    <accountAction>CREATE</accountAction>
+
+    <customer>
+        <firstName>Piotr</firstName>
+        <lastName>Masko</lastName>
+        <customerType>PRIVATE</customerType>
+        <idNumber>83112222222</idNumber>
+        <idNumberType>PESEL</idNumberType>
+    </customer>
+
+
+    <contracts>
+        <contract>
+            <msisdn>503222333</msisdn>
+            <ratePlan>XT_5022</ratePlan>
+            <startDate>2013-05-28</startDate>
+            <billingDay>13</billingDay>
+            <loyaltyLength>12</loyaltyLength>
+            <terminal>IPHONE5</terminal>
+            <terminalPriceNetto>1200.00</terminalPriceNetto>
+            <monthlyCommitmentNetto>30.00</monthlyCommitmentNetto>
+            <services>
+                <service id="XP_1">
+                    <serviceParameter>
+                        <parameterName>MSISDN</parameterName>
+                        <parameterValue>601222333</parameterValue>
+                    </serviceParameter>
+                    <servicePrice>
+                        <activation>1.0</activation>
+                        <recurring>1.0</recurring>
+                        <deactivation>0.1</deactivation>
+                    </servicePrice>
+                </service>
+
+                <service is="XP_1100"/>
+                <service is="XP_1100"/>
+            </services>
+        </contract>
+    </contracts>
+
+    <action>ACTIVATE</action>
+
+    <issueContext>
+        <sellerId>maskop</sellerId>
+        <creationDate>2013-05-24T10:10:00</creationDate>
+        <channel>IPHONEAPP</channel>
+    </issueContext>
+</order>
+
