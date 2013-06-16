@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tlc="http://prxsoftware.pl/sample/eai/telco"
+           targetNamespace="http://prxsoftware.pl/sample/eai/telco/cv"
+        xmlns="http://prxsoftware.pl/sample/eai/telco/cv" elementFormDefault="qualified">
+
+
+<xs:import namespace="http://prxsoftware.pl/sample/eai/telco" schemaLocation="createContract.xsd" />
+
+    <xs:complexType name="CustomerVerificationRequestType">
+        <xs:sequence>
+            <xs:element name="customer" type="tlc:customerType"/>
+            <xs:element name="contractsCount" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="CustomerVerificationResponseType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="resultDescription"/>
+            <xs:element type="xs:boolean" name="activationAllowed"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="CustomerVerificationRequest" type="CustomerVerificationRequestType"/>
+    <xs:element name="CustomerVerificationResponse" type="CustomerVerificationResponseType"/>
+
+</xs:schema>
